@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<!-- Andy Estevez / Smedly Moise -->
+<!-- BMCC Tech Innovation Hub Internship -->
+<!-- Spring Semester 2024 -->
+<!-- BMCC Resolve Project -->
+<!-- Contacts Page -->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>BMCC Resolve | Contacts</title>
+    </head>
+
+    <body>
+        <!-- Header / Navigation Bar -->
+        <nav>
+            <!-- Logo -->
+            <a href="index.html">
+                <img class="BMCCLogo" src="Elements\bmcc-logo-resolve.png" alt="BMCC Logo" height="50px">
+            </a>
+
+            <!-- Buttons -->
+            <div class="NavButtonsContainer">
+                <button type="button" class="navButton" onclick="location.href='index.html'">Home</button>
+                <button type="button" class="navButton" onclick="location.href='contacts.html'">Contacts</button>
+                <button type="button" class="navButton" id="login" onclick="location.href='login.php'">Log In</button>
+            </div>
+        </nav>
+
+        <!-- Content -->
+        <div class="contentBlock">
+            <h2 class="gradeHeader">Contacts</h2>
+
+            <!-- Panther Station Section -->
+            <h3>The Panther Station: General Guidance</h3>
+            <p>The Panther Station can offer advisement on many different domains, including admissions and financial aid. If they  
+                are unable to assist in a matter, they can guide you towards the right department or resource. They are highly 
+                reachable through many forms of communication, which makes them a good first stop. All of their contact information, as 
+                well as their hours of operation, can be found on their web page.
+                <a href="https://www.bmcc.cuny.edu/panther-station" target="_blank">Click here to visit the Panther Station web page</a>.
+            </p>
+
+            <!-- Academic Advisement Section -->
+            <h3>Academic Advisement</h3>
+            <p>
+                The Academic Advisement & Transfer Center (AATC) can be contacted about any questions or concerns you may have about 
+                opting for or receiving a grade. You can do this through an Academic Advisor. If you do not have one assigned, or do 
+                not know how to contact them, you can reach the AATC at aatc@bmcc.cuny.edu. All of their contact information, as well as 
+                their hours of operation, can be found on their web page.
+                <a href="https://www.bmcc.cuny.edu/academics/advisement" target="_blank">Click here to visit the Academic Advisement web page</a>.
+            </p>
+
+            <!-- Financial Aid Section -->
+            <h3>Financial Aid</h3>
+            <p>
+                The Financial Aid department can be contacted about any questions or concerns you may have about your financial aid status or 
+                eligibility. It's important to keep in mind that receiving grades such as "W" and "NC" can impact your financial aid eligibility, 
+                and it is wise to discuss this with a representative. The Financial Aid department's contact information, as well as their hours 
+                of operation, can be found on their web page.
+                <a href="https://www.bmcc.cuny.edu/finaid" target="_blank">Click here to visit the Financial Aid department web page</a>.
+            </p>
+
+            <!-- Counseling Center Section -->
+            <h3>Counseling Center</h3>
+            <p>
+                If you, or anyone you know, is struggling with any emotional or adjustment issues, or any other problems that are impacting your 
+                academic performance, you are invited to attend FREE and CONFIDENTIAL sessions with a school counselor. Counselors can help you 
+                work through your difficulties and plan ahead for what is to come. All of the Counseling Center's contact information, as well as 
+                their hours of operation, can be found on their web page.
+                <a href="https://www.bmcc.cuny.edu/student-affairs/counseling/" target="_blank">Click here to visit the Counseling Center web page</a>.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <a class="footerLink" href="https://maps.app.goo.gl/87HcM8tEhsrWe9wH6" target="_blank">
+                <p class="footerText"><u>
+                    Borough of Manhattan Community College <br>
+                    The City University of New York <br>
+                    199 Chambers Street <br>
+                    New York, NY 10007
+                </u></p>
+            </a>
+        </footer>
+
+        <!-- IBM Watson Chatbot -->
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "1db7fbd1-e4f7-4a21-8299-7b79b90d0406", // The ID of this integration.
+              region: "us-east", // The region your integration is hosted in.
+              serviceInstanceID: "ae83b918-3f7e-463e-a2ac-8327cd35ef06", // The ID of your service instance.
+              onLoad: async (instance) => { await instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+        </script>
+    </body>
+</html>

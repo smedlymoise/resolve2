@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<!-- Andy Estevez / Smedly Moise -->
+<!-- BMCC Tech Innovation Hub Internship -->
+<!-- Spring Semester 2024 -->
+<!-- BMCC Resolve Project -->
+<!-- Home / Landing Page -->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>BMCC Resolve | Home</title>
+    </head>
+
+    <body>
+        <!-- Header / Navigation Bar -->
+        <nav>
+            <!-- Logo -->
+            <a href="index.html">
+                <img class="BMCCLogo" src="Elements\BMCC-Logo-Resolve.png" alt="BMCC Logo" height="50px">
+            </a>
+
+            <!-- Buttons -->
+            <div class="NavButtonsContainer">
+                <button type="button" class="navButton" onclick="location.href='index.html'">Home</button>
+                <button type="button" class="navButton" onclick="location.href='contacts.html'">Contacts</button>
+                <button type="button" class="navButton" id="login" onclick="location.href='login.php'">Log In</button>
+            </div>
+        </nav>
+
+        <!-- Grade Block Organizer -->
+        <div class="contentBlock gradesHolder">
+            <!-- INC GRADE -->
+            <div class="gradeBlock">
+                <h2 class="gradeHeader homeGradeHeader">"INC" Grade</h2>
+                <div class="gradeSummaryContainer">
+                    <ul class="gradeSummary">
+                        <li>"Incomplete" Grade</li>
+                        <li>Related to the "FIN" Grade</li>
+                        <li>May Affect GPA (!)</li>
+                        <li>May Affect Graduation (!)</li>
+                        <li>Includes Deadlines (!)</li>
+                    </ul>
+                </div>
+                <button type="button" class="gradeButton" onclick="location.href='inc_grade.html'">Learn More</button>
+            </div>
+
+            <!-- FIN GRADE -->
+            <div class="gradeBlock">
+                <h2 class="gradeHeader homeGradeHeader">"FIN" Grade</h2>
+                <div class="gradeSummaryContainer">
+                    <ul class="gradeSummary">
+                        <li>"F-Incomplete" Grade</li>
+                        <li>Related to the "INC" Grade</li>
+                        <li>Negatively Affects GPA (!)</li>
+                        <li>Negatively Affects Graduation (!)</li>
+                        <li>Avoidable</li>
+                    </ul>
+                </div>
+                <button type="button" class="gradeButton" onclick="location.href='fin_grade.html'">Learn More</button>
+            </div>
+
+            <!-- W GRADE -->
+            <div class="gradeBlock">
+                <h2 class="gradeHeader homeGradeHeader">"W" Grade</h2>
+                <div class="gradeSummaryContainer">
+                    <ul class="gradeSummary">
+                        <li>"Withdrawal" Grade</li>
+                        <li>Does not affect GPA</li>
+                        <li>May Affect Graduation (!)</li>
+                        <li>May Affect Financial Aid (!)</li>
+                        <li>Includes Deadlines (!)</li>
+                    </ul>
+                </div>
+                <button type="button" class="gradeButton" onclick="location.href='w_grade.html'">Learn More</button>
+            </div>
+
+            <!-- NC GRADE-->
+            <div class="gradeBlock">
+                <h2 class="gradeHeader homeGradeHeader">"NC" Grade</h2>
+                <div class="gradeSummaryContainer">
+                    <ul class="gradeSummary">
+                        <li>"No Credit" Grade</li>
+                        <li>Does not affect GPA</li>
+                        <li>May Affect Graduation (!)</li>
+                        <li>May Affect Financial Aid (!)</li>
+                        <li>Includes Deadlines (!)</li>
+                    </ul>
+                </div>
+                <button type="button" class="gradeButton" onclick="location.href='nc_grade.html'">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <a class="footerLink" href="https://maps.app.goo.gl/87HcM8tEhsrWe9wH6" target="_blank">
+                <p class="footerText"><u>
+                    Borough of Manhattan Community College <br>
+                    The City University of New York <br>
+                    199 Chambers Street <br>
+                    New York, NY 10007
+                </u></p>
+            </a>
+        </footer>
+
+        <!-- IBM Watson Chatbot -->
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "1db7fbd1-e4f7-4a21-8299-7b79b90d0406", // The ID of this integration.
+              region: "us-east", // The region your integration is hosted in.
+              serviceInstanceID: "ae83b918-3f7e-463e-a2ac-8327cd35ef06", // The ID of your service instance.
+              onLoad: async (instance) => { await instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+        </script>
+    </body>
+</html>

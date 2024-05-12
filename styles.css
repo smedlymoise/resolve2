@@ -1,0 +1,1015 @@
+/*
+    Andy Estevez / Smedly Moise
+    BMCC Tech Innovation Hub Internship
+    Spring Semester 2024
+    BMCC Resolve Project
+    CSS Stylesheet
+*/
+
+/* ~~~~~~~~~~~~~~~ */
+/* General Website */
+/* ~~~~~~~~~~~~~~~ */
+
+:root {
+    --BMCC-Blue: #0058A4;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    color: var(--BMCC-Blue);
+}
+
+button {
+    cursor: pointer;
+}
+
+h3 {
+    color: var(--BMCC-Blue);
+}
+
+hr {
+    margin: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Header / Navigation Bar */
+/* ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+nav {
+    height: 75px;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(var(--BMCC-Blue), #004894);
+    z-index: 1;
+}
+
+.NavButtonsContainer {
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    justify-content: right;
+    margin-right: 125px;
+    margin-top: 12.5px;
+}
+
+.navButton {
+    height: 35px;
+    width: 90px;
+    margin: 7.5px 0 0 10px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(230, 230, 230, 0);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--BMCC-Blue);
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.navButton:hover {
+    background-color: rgb(205, 225, 245);
+    border-color: rgba(145, 165, 185, 255);
+}
+
+.navButton#login {
+    background-color: var(--BMCC-Blue);
+    border-color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.navButton#login:hover {
+    background-color: rgb(0, 75, 125);
+}
+
+.BMCCLogo {
+    margin-left: 125px;
+    margin-top: 12.5px;
+}
+
+/* ~~~~~~ */
+/* Footer */
+/* ~~~~~~ */
+
+footer {
+    height: 100px;
+    width: 100vw;
+    max-width: 100%;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(var(--BMCC-Blue), #004894);
+}
+
+footer.abs {
+    position: absolute;
+}
+
+.footerText {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.footerLink {
+    text-decoration: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ */
+/* Index / Landing Page */
+/* ~~~~~~~~~~~~~~~~~~~~ */
+
+.contentBlock {
+    min-height: calc(100vh - 175px);
+    height: fit-content;
+    width: calc(100vw - 250px);
+    margin: 0 auto;
+}
+
+.gradesHolder {
+    min-height: calc(100vh - 175px);
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.gradeBlock {
+    height: auto;
+    width: 50%;
+    border-width: 2px;
+    border-top-style: solid;
+    border-top-color: rgb(225, 225, 225);
+    border-bottom-style: solid;
+    border-bottom-color: rgb(225, 225, 225);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.gradeHeader {
+    color: var(--BMCC-Blue);
+    text-align: center;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.homeGradeHeader {
+    padding: 20px;
+}
+
+.gradeSummary {
+    display: inline-block;
+    text-align: left;
+}
+
+.gradeSummaryContainer {
+    text-align: center;
+    margin-top: -20px;
+}
+
+.gradeButton {
+    height: 30px;
+    width: 90px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: var(--BMCC-Blue);
+    border-color: rgba(230, 230, 230, 0);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.gradeButton:hover {
+    background-color: #004894;
+    border-color: rgba(145, 165, 185, 255);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* Log In / Sign Up Pages */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+
+.loginBody {
+    background-image: url('Elements/bmcc-logo-no-type-gray.png');
+    background-size: 100px;
+    animation: animate-loginBody-bg 5s infinite linear;
+}
+
+@keyframes animate-loginBody-bg {
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+.loginDiv {
+    height: calc(100vh - 325px);
+    width: 40vw;
+    margin: 75px auto 75px auto;
+    background: linear-gradient(var(--BMCC-Blue), #004894);
+    border-radius: 15px;
+}
+
+.loginHeader,
+.profileHeader,
+.confHeader {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+}
+
+.loginForm {
+    height: calc(100% - 134px);
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #003884;
+}
+
+.loginFormElement {
+    width: 255px;
+    height: 30px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input[type="radio"] {
+    background-color: red;
+    display: inline;
+    margin: 0;
+}
+
+label {
+    color: white;
+    margin: 0 15px;
+}
+
+.loginFormButton {
+    display: block;
+    width: 30%;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(230, 230, 230, 0);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--BMCC-Blue);
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.loginFormButton:hover {
+    background-color: rgb(205, 225, 245);
+    border-color: rgba(145, 165, 185, 255);
+}
+
+.registerLink {
+    display: block;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ */
+/* Student Console Page */
+/* ~~~~~~~~~~~~~~~~~~~~ */
+
+.classesBlock {
+    width: 50vw;
+    height: calc(100vh - 325px);
+    margin: 75px auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background: linear-gradient(var(--BMCC-Blue), #004894);
+}
+
+.classesBlock#leftAligned {
+    width: calc(100vw - 765px);
+    margin: 75px 125px;
+    float: left;
+}
+
+.classesBlockHeader {
+    color: white;
+    text-align: center;
+}
+
+.classesBlockBody {
+    flex: 1;
+    margin: 0 16px 16px 16px;
+    overflow: auto;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 15px;
+    background-color: #003884;
+}
+
+.classLink {
+    text-decoration: none;
+}
+
+.classBlockItem {
+    min-height: calc(33.33% - 1.6px);
+    border-style: solid;
+    border-color: white;
+    border-width: 0;
+    overflow: hidden;
+    transition: background-color 0.25s;
+}
+
+.classBlockItem:hover {
+    background-color: #002874;
+}
+
+.classBlockItemInfo {
+    margin: 16px 0 16px 0;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+.searchBar {
+    height: 30px;
+    padding: 0 16px 0 16px;
+    margin: 0 16px 16px 16px;
+    border: 3px solid white;
+    border-radius: 25px;
+    background-color: #003884;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+}
+
+.searchBar::placeholder {
+    color: rgb(170, 170, 170);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ */
+/* Student Profile Page */
+/* ~~~~~~~~~~~~~~~~~~~~ */
+
+.profileDiv {
+    height: calc(100vh - 325px);
+    width: 25vw;
+    margin: 75px auto 75px auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(var(--BMCC-Blue), #004894);
+}
+
+.profileBody {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 0px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    margin-bottom: 35px;
+    background-color: #003884;
+}
+
+.profileText {
+    color: white;
+    margin-left: 15px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Student Class Viewer Page */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.classInfo {
+    width: 100vw;
+    max-width: 100%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: #003884;
+}
+
+.classInfo.student {
+    justify-content: center;
+}
+
+.assignmentBlock {
+    width: calc(100vw - 250px);
+    height: fit-content;
+    overflow: hidden;
+    margin: 25px auto 25px auto;
+    border-radius: 15px;
+    text-align: center;
+    background: linear-gradient(var(--BMCC-Blue), #004894);
+}
+
+.assignmentBlockBody {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: #003884;
+}
+
+.assignmentText {
+    text-align: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: white;
+}
+
+.assignmentButton {
+    height: 35px;
+    width: 175px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(230, 230, 230, 0);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--BMCC-Blue);
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.assignmentButton:hover {
+    background-color: rgb(205, 225, 245);
+    border-color: rgba(145, 165, 185, 255);
+}
+
+.assignmentButtonDis {
+    height: 35px;
+    width: 15%;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(230, 230, 230, 0);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--BMCC-Blue);
+    cursor: default;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Student Assignment Confirmation Page */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.confDiv {
+    height: calc(100vh - 278.5px);
+    width: 25vw;
+    margin: 25px auto 25px auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(var(--BMCC-Blue), #004894);
+}
+
+.confBody {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 0px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    margin-bottom: 35px;
+    background-color: #003884;
+}
+
+.confText {
+    color: white;
+    margin: 10px;
+}
+
+.confButtonHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.confButton {
+    height: 35px;
+    width: 33%;
+    margin: 0 20px 10px 20px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(230, 230, 230, 0);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--BMCC-Blue);
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.confButton:hover {
+    background-color: rgb(205, 225, 245);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ */
+/* Faculty Console Page */
+/* ~~~~~~~~~~~~~~~~~~~~ */
+
+.facultyClassesBlockHead {
+    margin: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.facultyConsoleButton {
+    width: calc(50% - 7.5px);
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--BMCC-Blue);
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.facultyConsoleButton:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-color: rgba(125, 150, 175, 1);
+}
+
+.adminConsoleButton{
+    width: calc(33.3% - 7.5px);
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--BMCC-Blue);
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.adminConsoleButton:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-color: rgba(125, 150, 175, 1);
+}
+
+#inactiveFacultyConsoleButton {
+    background-color: rgba(255, 255, 255, 0.75);
+    cursor: default;
+}
+
+#inactiveFacultyConsoleButton:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.addClassFormDiv {
+    width: 390px;
+    height: calc(100vh - 325px);
+    margin: 75px 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background: linear-gradient(var(--BMCC-Blue), #004894);
+}
+
+/* ~~~~~~~~~~~~ */
+/* student home */
+/* ~~~~~~~~~~~~ */
+
+.placeholder {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .inc_info,
+  .study_tips {
+    width: 40%; 
+    border: 1px solid #c8c5c5;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #b2b0b0;
+  }
+  
+  .progress_box {
+    border: 1px solid ;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #b2b0b0;
+  }
+  
+  .classes_container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .classes {
+    margin-right: 10px; 
+  }
+  
+
+.classDateHolder {
+    width: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.classDateElement {
+    width: calc(50% - 15px);
+}
+
+.classDateElement#classSemester {
+    height: 35px;
+}
+
+#classSemester {
+    color: rgb(125, 125, 125);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Faculty Class Viewer Page */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.assignmentCornerButton {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 17.5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.assignmentCornerButton.classSettings {
+    margin: 0 142.5px;
+    background: url(Elements/SettingsIcon.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.assignmentCornerButton.classAnnouncements {
+    margin: 0 142.5px;
+    background: url(Elements/MegaphoneIcon.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.createAssignmentButton {
+    height: 35px;
+    width: 175px;
+    display: block;
+    margin: 25px auto;
+    background-color: var(--BMCC-Blue);
+    border: 2px solid rgba(230, 230, 230, 0);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.createAssignmentButton:hover {
+    background-color: #004894;
+    border-color: rgba(145, 165, 185, 255);
+}
+
+.assignmentBlockHead {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assignmentCornerButton.assignmentSettings {
+    margin: 0 25px;
+    background: url(Elements/SettingsIcon.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.assignmentCornerButton.assignmentNotifications {
+    margin: 0 25px;
+    background: url(Elements/BellIcon.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+/* ~~~~~~~~~~~~~~~~  */
+/* Faculty Home Page */
+/* ~~~~~~~~~~~~~~~~~ */
+
+.calendar-container#leftAligned {
+    width: calc(100vw - 765px);
+    margin: 75px 125px;
+    float: left;
+  }
+
+  .calendar-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  .calendar-container img {
+    margin-bottom: 5px; 
+  }
+  
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Faculty Class Editor Page */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.assignmentCornerButton.removeStudent {
+    margin-right: 8px;
+    background-image: url(Elements/RemoveIcon.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.classesBlock.classEditor {
+    width: calc(100vw - 765px);
+    min-width: 300px;
+    margin: 48.5px 125px;
+}
+
+.addClassFormDiv.editor {
+    margin: 48.5px 125px;
+    position: relative;
+    float: left;
+}
+
+.classBlockItem.classEditor {
+    min-height: calc(20% - 1.6px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: none;
+}
+
+.classBlockItem.classEditor:hover {
+    background-color: initial;
+}
+
+.classBlockItemInfo.classEditor {
+    flex: 1;
+}
+
+.classEditorForm {
+    margin: 0 16px 16px 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.loginFormElement.classEditor {
+    flex: 1;
+}
+
+.loginFormButton.classEditor {
+    width: 15%;
+    height: 35px;
+    min-width: 45px;
+    margin-left: 16px;
+    border-radius: 10px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Faculty Assignment Adder Page */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.addClassFormDiv.assignmentAdder {
+    width: 66.6%;
+    min-width: fit-content;
+    position: static;
+    margin: 48.5px auto;
+}
+
+.loginForm.assignmentAdder {
+    padding: 0 16px;
+}
+
+.assignmentAdderSubBody {
+    width: 100%;
+    height: calc(100% - 80px);
+    padding: 16px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.assignmentInfoHolder {
+    width: 66.6%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.classDateHolder.assignmentAdder {
+    width: 100%;
+}
+
+.loginFormElement.title {
+    flex: 1;
+    padding: 0 2px;
+    margin-right: 16px;
+}
+
+.loginFormElement.desc {
+    width: calc(100% - 4px);
+    flex: 1;
+    padding: 0 2px;
+    margin-top: 16px;
+}
+
+.assignmentStudentListHolder {
+    flex: 1;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assignmentAdderSubHeader {
+    height: 30px;
+    margin: 5px 0 16px 0;
+    font-size: 20px;
+    color: white;
+}
+
+.assignmentStudentListDiv {
+    width: calc(100%);
+    border-radius: 10px;
+    flex: 1;
+    overflow: auto;
+    background-color: white;
+}
+
+.assignmentStudentDiv {
+    width: 100%;
+    min-width: fit-content;
+    height: calc(20% - 1.6px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.assignmentStudentCheckbox {
+    margin: 0 8px;
+}
+
+.assignmentStudentLabel {
+    margin: 0;
+    white-space: nowrap;
+    color: black;
+}
+
+.loginFormButton.assignmentAdder {
+    width: 160px;
+    margin-bottom: 16px;
+}
+
+/* ~~~~~~~~~~~~~~~~~ */
+/* Assignment Grader */
+/* ~~~~~~~~~~~~~~~~~ */
+
+.assignmentGraderBodyDiv {
+    width: calc(100% - 250px);
+    height: calc(100vh - 330px);
+    padding: 0 125px;
+    margin: 10px 0 57px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.classesBlock.assignmentGrader {
+    width: calc(33.3% - 85px);
+    height: 100%;
+    margin: 0;
+}
+
+.classBlockItem.assignmentGrader {
+    height: 50%;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.classBlockItem.assignmentGrader.unsubmitted {
+    height: 16.6%;
+}
+
+.classBlockItem.assignmentGrader.graded {
+    height: 33.3%;
+}
+
+
+.loginFormElement.assignmentGrader {
+    width: 125px;
+}
+
+.loginFormButton.assignmentGrader {
+    width: 125px;
+    margin: 20px 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ */
+/* Faculty Home content */
+/* ~~~~~~~~~~~~~~~~~~~~ */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100vh - 175px);
+}
+
+.flex-item-1{
+    padding-left: 125px;
+    margin-right: 10px;
+    flex:  1;
+    width: 55%;
+    height: 100%;
+}
+
+.flex-item-2{
+    height: calc(100% - 3px);
+    width: 273px;
+    padding: 0 20px;
+    border-top: 2px solid lightgray;
+    border-left: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    overflow: auto;
+    color: white;
+    background-color: #003884;
+}
+
+#welcome-title {
+    margin: 0;
+    margin-top: 20px;
+    color: var(--BMCC-Blue);
+    text-align: center;
+}
+
+#assignments-title {
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .assignment-title{
+    color: white;
+  }

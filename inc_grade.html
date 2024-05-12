@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<!-- Andy Estevez / Smedly Moise -->
+<!-- BMCC Tech Innovation Hub Internship -->
+<!-- Spring Semester 2024 -->
+<!-- BMCC Resolve Project -->
+<!-- INC Grade Info Page -->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>BMCC Resolve | INC Grade</title>
+    </head>
+
+    <body>
+        <!-- Header / Navigation Bar -->
+        <nav>
+            <!-- Logo -->
+            <a href="index.html">
+                <img class="BMCCLogo" src="Elements\bmcc-logo-resolve.png" alt="BMCC Logo" height="50px">
+            </a>
+
+            <!-- Buttons -->
+            <div class="NavButtonsContainer">
+                <button type="button" class="navButton" onclick="location.href='index.html'">Home</button>
+                <button type="button" class="navButton" onclick="location.href='contacts.html'">Contacts</button>
+                <button type="button" class="navButton" id="login" onclick="location.href='login.php'">Log In</button>
+            </div>
+        </nav>
+
+        <!-- Content -->
+        <div class="contentBlock">
+            <h2 class="gradeHeader">"INC" Grade</h2>
+
+            <!-- General Information -->
+            <h3>You Should Know</h3>
+            <p>
+                The "INC" (Incomplete) grade is assigned when a Semester/Term's work is incomplete. The instructor has reasonable 
+                expectations that the student can receive a passing grade after completing the missing assignment(s), and agrees to 
+                work with the student to make up the missing work. The Student must agree with the faculty to make up the missing work 
+                before the "INC" deadline, which is published on the BMCC
+                <a href="https://www.bmcc.cuny.edu/academics/academic-calendar/spring-regular-2024/#:~:text=%22NC%22%20grade-,May%2015,lapse%20of%20INC%20to%20FIN%20from%20Fall%202023%20and%20Winter%202024,-May%2015" target="_blank">Academic Calendar</a>.
+            </p>
+
+            <p>
+                The “INC” grade converts into a 
+                <a href="fin_grade.html" target="_blank">“FIN” grade</a> 
+                if all responsibilities assigned to the student by the
+                instructor are not met by the "INC" deadline. "FIN" grades are treated as "F" (Failure) grades and will have negative
+                consequences on GPA. They may also impact financial aid status, and cause you to not meet graduation requirements.
+                Be mindful of the fact that the "INC" deadline may vary depending on the semester. Typically, If an "INC" grade is 
+                assigned to a student for a class that took place in the Fall semester, the "INC" deadline for that student will fall 
+                sometime in the Spring semester, and vice versa. Refer to the Academic Calendar to learn when this deadline may be for
+                you.
+            </p>
+
+            <p>
+                Remember to reach out to your professor to confirm what work must be completed and by when, in order to earn a standard 
+                letter grade. Make sure to have this information stored somewhere that is readily available should you ever need it again.
+                All missing coursework must be completed no later than the deadline posted on the Academic Calendar. If your work is not 
+                submitted by that deadline, your "INC" grade will become a "FIN" grade, and faculty may not be able to change it into another 
+                letter grade after the deadline.
+            </p>
+
+            <!-- Contact Information -->
+            <h3>Get In Touch</h3>
+            <p>
+                If you are a recipient of an "INC" grade, or are expecting to get one, and have any questions or concerns, contact 
+                StudentSuccess@bmcc.cuny.edu. If you are a member of ASAP, BLA, College Discovery, or CUNY EDGE, you may choose 
+                to contact your advisor. If you would like to get in a touch with a relevant department, you may  refer to the
+                <a href="contacts.html" target="_blank">Contacts</a>
+                page for more information.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <a class="footerLink" href="https://maps.app.goo.gl/87HcM8tEhsrWe9wH6" target="_blank">
+                <p class="footerText"><u>
+                    Borough of Manhattan Community College <br>
+                    The City University of New York <br>
+                    199 Chambers Street <br>
+                    New York, NY 10007
+                </u></p>
+            </a>
+        </footer>
+
+        <!-- IBM Watson Chatbot -->
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "1db7fbd1-e4f7-4a21-8299-7b79b90d0406", // The ID of this integration.
+              region: "us-east", // The region your integration is hosted in.
+              serviceInstanceID: "ae83b918-3f7e-463e-a2ac-8327cd35ef06", // The ID of your service instance.
+              onLoad: async (instance) => { await instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+        </script>
+    </body>
+</html>

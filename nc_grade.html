@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!-- Andy Estevez / Smedly Moise -->
+<!-- BMCC Tech Innovation Hub Internship -->
+<!-- Spring Semester 2024 -->
+<!-- BMCC Resolve Project -->
+<!-- NC Grade Info Page -->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>BMCC Resolve | NC Grade</title>
+    </head>
+
+    <body>
+        <!-- Header / Navigation Bar -->
+        <nav>
+            <!-- Logo -->
+            <a href="index.html">
+                <img class="BMCCLogo" src="Elements\bmcc-logo-resolve.png" alt="BMCC Logo" height="50px">
+            </a>
+
+            <!-- Buttons -->
+            <div class="NavButtonsContainer">
+                <button type="button" class="navButton" onclick="location.href='index.html'">Home</button>
+                <button type="button" class="navButton" onclick="location.href='contacts.html'">Contacts</button>
+                <button type="button" class="navButton" id="login" onclick="location.href='login.php'">Log In</button>
+            </div>
+        </nav>
+
+        <!-- Content -->
+        <div class="contentBlock">
+            <h2 class="gradeHeader">"NC" Grade</h2>
+
+            <!-- General Information -->
+            <h3>You Should Know</h3>
+            <p>
+                The "NC" (No Credit) grade is assigned when eligible students apply for the grade and are approved. It is 
+                an option for freshmen (with no more than 30 credits) and nursing students (2nd-4th semesters) under specific 
+                conditions. You can apply for NC in courses with a failing grade (C- or below) but must still attend class, 
+                complete assignments, and take the exam. There is a deadline to opt-in for this grade, which can be found on the BMCC
+                <a href="https://www.bmcc.cuny.edu/academics/academic-calendar/spring-regular-2024/#:~:text=Evaluations%20submission%20deadline-,May%2015,Last%20day%20to%20opt%20for%20an%20%22NC%22%20grade,-May%2015" target="_blank">Academic Calendar</a>. 
+                A maximum of 8 credits, or 2 classes, can qualify for this grade.
+            </p>
+
+            <p>
+                "NC" grades do not hurt your GPA, but they remain on your transcript. While GPA is not impacted by 
+                this grade, consider using "NC" grades sparingly as multiple "NC" grades might raise questions during transfer 
+                and/or grad school applications. In some cases, other schools may even consider an "NC" grade to be equivalent 
+                to an "F" grade. Additionally, even though "NC" grades won't affect gpa, they can delay graduation and impact 
+                financial aid.
+            </p>
+
+            <!-- Contact Information -->
+            <h3>Get In Touch</h3>
+            <p>
+                If you are a recipient of an "NC" grade, or are expecting to get one, and have any questions or concerns, contact 
+                StudentSuccess@bmcc.cuny.edu. If you are a member of ASAP, BLA, College Discovery, or CUNY EDGE, you may choose 
+                to contact your advisor. If you would like to get in a touch with a relevant department, you may  refer to the
+                <a href="contacts.html" target="_blank">Contacts</a>
+                page for more information.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <a class="footerLink" href="https://maps.app.goo.gl/87HcM8tEhsrWe9wH6" target="_blank">
+                <p class="footerText"><u>
+                    Borough of Manhattan Community College <br>
+                    The City University of New York <br>
+                    199 Chambers Street <br>
+                    New York, NY 10007
+                </u></p>
+            </a>
+        </footer>
+
+        <!-- IBM Watson Chatbot -->
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "1db7fbd1-e4f7-4a21-8299-7b79b90d0406", // The ID of this integration.
+              region: "us-east", // The region your integration is hosted in.
+              serviceInstanceID: "ae83b918-3f7e-463e-a2ac-8327cd35ef06", // The ID of your service instance.
+              onLoad: async (instance) => { await instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+        </script>
+    </body>
+</html>
